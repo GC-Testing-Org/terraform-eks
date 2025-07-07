@@ -27,5 +27,6 @@ module "eks" {
       desired_size = 2
     }
   }
+  enable_kms_key_rotation        = true
+  cluster_endpoint_public_access = false
 }
-
