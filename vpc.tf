@@ -41,4 +41,8 @@ module "vpc" {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
     "kubernetes.io/role/internal-elb"             = "1"
   }
+  create_igw                             = false
+  enable_flow_log                        = true
+  create_database_internet_gateway_route = false
+  enable_network_address_usage_metrics   = true
 }
